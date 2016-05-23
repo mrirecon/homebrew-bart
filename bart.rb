@@ -14,6 +14,7 @@ class Bart < Formula
   depends_on "homebrew/versions/libpng12"
 
   def install
+    ENV["MACPORTS"] = "0"
     ENV["CUDA"] = "1" if build.with? "cuda"
     ENV["OMP"] = "0" if build.with? "serial"
     system "make"
