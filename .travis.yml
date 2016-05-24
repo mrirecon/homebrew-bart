@@ -1,0 +1,8 @@
+matrix:
+  include:
+    - env: MACPORTS=0
+      os: osx
+      before_install:
+        - brew update
+      script:
+          - brew install mrirecon/bart/bart
