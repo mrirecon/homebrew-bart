@@ -1,8 +1,8 @@
 class Bart < Formula
   desc "Image-reconstruction toolbox for computational MRI"
   homepage "https://mrirecon.github.io/bart/"
-  url "https://github.com/mrirecon/bart/archive/v#{version}.tar.gz"
   version "0.3.01"
+  url "https://github.com/mrirecon/bart/archive/v#{version}.tar.gz"
   sha256 "3c34b28ce3151f7f1ffe23b16fb0014123668b22e316b842e32ec125a079d09a"
 
   option "with-cuda", "Do GPU computing with CUDA"
