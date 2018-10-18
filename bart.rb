@@ -8,12 +8,11 @@ class Bart < Formula
   option "with-serial", "Do serial computing by turning off OpenMP"
 
   depends_on "fftw"
-  depends_on "gcc@8"
   depends_on "openblas"
   depends_on "libpng"
 
   def install
-    ENV["CC"] = "gcc-8"
+    ENV["CC"] = "gcc"
     ENV["MACPORTS"] = "0"
     ENV["CUDA"] = "1" if build.with? "cuda"
     ENV["OMP"] = "1" if build.with? "serial"

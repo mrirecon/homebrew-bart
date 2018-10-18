@@ -1,8 +1,13 @@
 matrix:
   include:
-    - env: MACPORTS=0
-      os: osx
-      before_install:
-        - brew update
-      script:
-          - brew install bart.rb
+    - os: osx
+      osx_image: xcode8
+      env:
+        - MACPORTS=0
+
+script:
+  - brew install bart.rb
+
+before_install:
+  - brew update
+  - eval "${MATRIX_EVAL}"
