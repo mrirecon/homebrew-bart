@@ -5,4 +5,4 @@ matrix:
       before_install:
         - brew update
       script:
-          - brew install mrirecon/bart/bart
+          - brew install bart.rb
